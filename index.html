@@ -4,8 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    
+    <div class="wrapper flex justify-center items-center flex-col">
+
+        <!-- Heading And Dark Mode Section -->
+        <div class="heading" >
+            <h1 class="head">DevDetective</h1>
+            <button class="flex items-center" darkLight-button>
+                <span darkLight-text>Dark</span>
+                <img src="assets/night-mode.png" class="ml-2"  darkLight-img width="35" height="35">
+            </button>
+        </div>
+
+        <!-- Search Box -->
+        <form  class="serachUser serach" serachUser>
+            <input type="text" placeholder="🔍 Enter a GitHub Username...." serachUsername>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded" type="submit">Search</button>
+        </form>
+
+        <!-- User Infromation -->
+        <div class="currentUserInformation serach">
+            <div class="currentUserImage">
+                <img currentUserImage style="width: 200px; height: 200px; border-radius: 100%;">
+            </div>
+            <div class="currentUserInfo">
+
+                <div >
+                    <div class="flex justify-between items-center">
+                        <p currentUserName class="currentUserName"></p>
+                        <p currentUserJoinedDate class="currentUserJoinedDate"></p>
+                    </div>                    
+                    <p currentLoginName></p>
+                </div>
+
+                <div>
+                    <p currentUserBio class="currentUserBio"></p>
+                </div>
+
+                <div class="flex justify-between items-center p-10" style="background-color: rgba(116, 146, 173, 0.5);">
+
+                    <div>
+                        <p class="cardName">Repository</p>
+                        <p currentUserRepos class="cardNumber"></p>
+                    </div>
+
+                    <div>
+                        <p class="cardName">Follwers</p>
+                        <p currentUserFollwers class="cardNumber"></p>
+                    </div>
+
+                    <div>
+                        <p class="cardName">Following</p>
+                        <p currentUserFollowing class="cardNumber"></p>
+                    </div>
+                    
+                </div>
+
+                <div class="container">
+
+                    <div class="iteam">
+                        <img src="assets/pin.png" class="ml-2"  darkLight-img width="25" height="25">
+                        <p currentUserLoaction></p>
+                    </div>
+
+                    <div class="iteam">
+                        <img src="assets/link.png" class="ml-2"  darkLight-img width="25" height="25">
+                        <p currentUserLink></p>
+                    </div>
+
+                    <div class="iteam">
+                        <img src="assets/twitter.png" class="ml-2"  darkLight-img width="25" height="25">
+                        <p currentUserTwitterLink></p>
+                    </div>
+
+                    <div class="iteam">
+                        <img src="assets/business-and-trade.png" class="ml-2"  darkLight-img width="25" height="25">
+                        <p currentUserCompany></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>
